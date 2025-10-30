@@ -143,11 +143,11 @@ export default function App() {
     setLineIndex(0);
   };
   const handleShare = () => {
-    const text = `I just completed the Kite AI Quiz by @Toluszn and scored ${score}/${quizData.length}! 🚀`;
-    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
-    window.open(url, "_blank");
-  };
-
+  const quizUrl = "https://kiteai-quiz.netlify.app/";
+  const text = `I just completed the Kite AI Quiz by @Toluszn and scored ${score}/${quizData.length}! 🚀\nTry it yourself: ${quizUrl}`;
+  const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
+};
   // === PHASE RENDER ===
   if (phase === "intro") {
     return (
